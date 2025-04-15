@@ -1,0 +1,34 @@
+version: "3.8" # ✅ FIX: remove the extra `.1`, just write "3.8"
+
+services:
+  backend:
+    build:
+      context: .
+      dockerfile: backend/Dockerfile
+    container_name: login-backend
+    ports:
+      - "3001:3001"
+    environment:
+      - DB_HOST=mysql
+      - DB_USER=root
+      - DB_PASSWORD=Masters@2026
+      - DB_NAME=loginapp
+      - PORT=3001
+      - SESSION_SECRET=secret123
+    depends_on:
+      - mysql
+
+  mysql:
+    image: mysql:5.7
+    container_name: login-mysql
+    ports:
+      - "3307:3306"
+    environment:
+      - MYSQL_ROOT_PASSWORD=Masters@2026
+      - MYSQL_DATABASE=loginapp
+    volumes:
+      - mysql_data:/var/lib/mysql
+      - ./init.sql:/docker-entrypoint-initdb.d/init.sql # ✅ runs on container first start only
+
+volumes:
+  mysql_data:

@@ -1,0 +1,95 @@
+/* Base layout and center alignment */
+html, body {
+  margin: 0;
+  padding: 0;
+  background-color: #f1f5f9;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  box-sizing: border-box;
+}
+
+/* Container to center content */
+.container {
+  text-align: center;
+  max-width: 400px;
+  width: 100%;
+}
+
+/* Headings */
+h1 {
+  margin-bottom: 20px;
+  color: #1e293b;
+}
+
+/* Form styles */
+form {
+  background-color: white;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  text-align: left;
+}
+
+/* Label and Input styling */
+label {
+  display: block;
+  margin-bottom: 5px;
+  color: #334155;
+  font-weight: 500;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border-radius: 6px;
+  border: 1px solid #cbd5e1;
+  font-size: 14px;
+  box-sizing: border-box;
+}
+
+/* Button styling */
+button {
+  width: 100%;
+  padding: 12px;
+  background-color: #0ea5e9;
+  border: none;
+  color: white;
+  font-weight: bold;
+  font-size: 14px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+button:hover {
+  background-color: #0284c7;
+}
+
+/* Below form text */
+p {
+  margin-top: 15px;
+  color: #475569;
+  text-align: center;
+}
+
+a {
+  color: #0ea5e9;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Dashboard button spacing */
+.dashboard-buttons button {
+  margin: 10px 0;
+  padding: 12px 20px;
+}
