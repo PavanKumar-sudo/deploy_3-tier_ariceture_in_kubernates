@@ -16,7 +16,7 @@ COPY ./backend ./backend
 COPY ./frontend ./frontend
 
 # Expose app port
-EXPOSE 3000
+EXPOSE 3001
 
 # Start app (assuming index.js is main file in backend/)
 CMD ["node", "backend/index.js"]
